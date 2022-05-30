@@ -1,14 +1,16 @@
 # coordsFromGeoportaltoExcel
-VBA script that allows to obtain and upload to Excel the coordinates of the client of the CNEL EP geoportal (Ecuador) from the unique national code of the client through web requests and json responses.
+Script VBA que permite obtener y subir a Excel las coordenadas del cliente del geoportal CNEL EP (Ecuador) a partir del código nacional único del cliente mediante solicitudes web y respuestas json.
 
 
-Execution Test:
+Prueba de Ejecucion:
+
 
 ![Imgur](https://i.imgur.com/QwJ3mu7.gif)
 
-To execute:
-* Visit the geoportal and perform any search by unique code:
 
+Para ejecutar:
+
+*Visite el geoportal y realice una busqueda cualquiera por codigo unico:
 https://geoportal.cnelep.gob.ec/cnel/
 
 
@@ -18,7 +20,8 @@ https://geoportal.cnelep.gob.ec/cnel/
 ![Imgur2](https://i.imgur.com/F7tfvMA.png)
 
 
-* Access the development tools of our browser before executing the search (I usually use the f12 key in chrome) and press apply, we locate the first requested Query request in the network list of the development tools and display the details.
+* Acceda a las herramientas de desarrollo de nuestro navegador antes de ejecutar la busqueda (generalmente utilizo la tecla f12 en chrome) y presionamos aplicar, ubicamos en la lista de red de las herramientas de desarrollo la primera peticion Query solicitada y desplegamos los detalles.
+
 
 ![Imgur4](https://i.imgur.com/UjTQend.png)
 
@@ -26,10 +29,10 @@ https://geoportal.cnelep.gob.ec/cnel/
 ![Imgur3](https://i.imgur.com/H8Xr3QO.png)
 
 
-* Create an excel file with a specific sheet from which the code will obtain the references of which columns contain coordinates (except for the first row).
-* Copy the selection (url before the word query) and transfer it to our Excel VAR sheet:
+* Cree un archivo excel con una hoja especifica de la cual el codigo obtendra las referencias de cuales son las columnas que contienen coordenadas(a excepcion de la primera fila).
+Copiamos lo seleccionado (url antes de la palabra query) y lo trasladamos a nuestra hoja VAR de Excel:
 
-VAR Sheet:
+Hoja VAR:
 
 
 ![Imgur4](https://i.imgur.com/BQ1qaDC.png)
@@ -38,27 +41,27 @@ VAR Sheet:
 ![Imgur5](https://i.imgur.com/vpPBbRI.png)
 
 
-* Import the .bas .cls modules from the excel VBA editor.
-Special thanks to the post https://www.codeproject.com/Articles/828911/Recursive-VBA-JSON-Parser-for-Excel
+* Importe los modulos .bas .cls desde el editor de VBA de excel.
+Agadecimiento especial al post https://www.codeproject.com/Articles/828911/Recursive-VBA-JSON-Parser-for-Excel
 
 
 ![Imgur6](https://i.imgur.com/aSbpjgJ.png)
 
 
-* In Excel, build the following table on an empty sheet, paying special attention to the columns specified in the VAR sheet in the previous step. The columns must match the headers, not textually, but they must be the data specified in the VAR sheet.
+* En Excel construya en una hoja vacia la siguiente tabla poniendo especial atencion a las columnas especificadas en la hoja VAR en el paso anterior las columnas deben concordar con los encabezados, no textualmente pero si deben ser los datos que se especificaron el la hoja VAR.
 
 
 ![Imgur7](https://i.imgur.com/xQoRmda.png)
 
 
-* Execute the macro according to the need and requirement.
+* Ejecutar la macro segun la necesidad y requerimiento.
 
-* Once the table has data, it can be executed by selecting one or more elements from the UNIC CODE column (column A), as long as there is reference data to perform the search.
+Una vez la tabla tenga datos se puede ejecutar seleccionando uno a varios elementos de la columna UNIC CODE (columna A), esto siempre que haya datos de referencia para realizar la busqueda.
 
 
 ![Imgur8](https://i.imgur.com/QwJ3mu7.gif)
 
 
-Bibliography:
+Bibliografia:
 
 https://www.codeproject.com/Articles/828911/Recursive-VBA-JSON-Parser-for-Excel
